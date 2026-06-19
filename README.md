@@ -46,7 +46,7 @@ Built using **Streamlit, Google Gemini, Tavily Search API, PyMuPDF, and Plotly A
 
 # 🌐 Live Demo
 
-👉 Deployed App: https://your-app-name.streamlit.app
+👉 Deployed App: https://factcheck-agent-gezcrwmjlohcmusyd8ddpy.streamlit.app/
 
 👉 GitHub Repository: https://github.com/Ishansh10113/factcheck-agent
 
