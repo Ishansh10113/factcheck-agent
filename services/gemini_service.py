@@ -78,4 +78,3 @@ class GeminiService:
         raise Exception(
             "Gemini service is currently unavailable after multiple retries."
         )
-print("Using Gemini Key:", GEMINI_API_KEY[:20])
