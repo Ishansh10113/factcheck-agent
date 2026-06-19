@@ -23,4 +23,3 @@ print(
     "Tavily Key Loaded:",
     TAVILY_API_KEY[:10] if TAVILY_API_KEY else "None"
 )
-print("Gemini Key Loaded:", GEMINI_API_KEY[:20])
