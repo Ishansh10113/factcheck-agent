@@ -393,3 +393,26 @@ ConnectionResetError: [WinError 10054] An existing connection was forcibly close
 2026-06-19 13:14:53,032 | INFO | AFC is enabled with max remote calls: 10.
 2026-06-19 13:14:53,459 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
 2026-06-19 13:14:53,463 | ERROR | Claim Extraction Error -> Gemini quota exceeded. Please try later or use another API key.
+2026-06-19 14:07:12,260 | INFO | Pages Found: 39
+2026-06-19 14:07:12,299 | INFO | Characters Extracted: 39601
+2026-06-19 14:07:12,299 | INFO | Text exceeded 15000 chars.
+2026-06-19 14:07:12,300 | INFO | Text truncated to 15021 chars.
+2026-06-19 14:07:12,300 | INFO | Starting Claim Extraction...
+2026-06-19 14:07:12,300 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 14:07:12,385 | ERROR | Claim Extraction Error -> [WinError 10054] An existing connection was forcibly closed by the remote host
+2026-06-19 14:09:32,029 | ERROR | Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+2026-06-19 14:09:37,753 | INFO | Pages Found: 39
+2026-06-19 14:09:37,776 | INFO | Characters Extracted: 39601
+2026-06-19 14:09:37,776 | INFO | Text exceeded 15000 chars.
+2026-06-19 14:09:37,776 | INFO | Text truncated to 15021 chars.
+2026-06-19 14:09:37,778 | INFO | Starting Claim Extraction...
+2026-06-19 14:09:37,778 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 14:09:38,081 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-19 14:09:38,084 | ERROR | Claim Extraction Error -> Gemini quota exceeded. Please try later or use another API key.

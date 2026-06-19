@@ -163,327 +163,369 @@ with c4:
 
 if page == "🏠 Dashboard":
 
- upload_container = st.container()
+    upload_container = st.container()
 
- with upload_container:
+    with upload_container:
 
-    st.markdown("""
-    <div class="upload-card">
-        <div class="section-title">
-         📄 Upload PDF Document
-        </div>
+        st.markdown("""
+        <div class="upload-card">
 
-        <div class="section-subtitle">
-         Upload your document and let AI extract,
-         verify and generate evidence-based reports.
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
+            <div class="section-title">
+                📄 Upload PDF Document
+            </div>
 
-    uploaded_file = st.file_uploader(
-        "",
-        type=["pdf"],
-        label_visibility="collapsed"
-    )
-
-    if uploaded_file:
-
-        st.markdown(f"""
-        <div class='success-card'>
-
-        ✅ <b>{uploaded_file.name}</b>
-
-        <br><br>
-
-        📦 Size:
-        {round(uploaded_file.size/(1024*1024),2)} MB
+            <div class="section-subtitle">
+                Upload your document and let AI extract,
+                verify and generate evidence-based reports.
+            </div>
 
         </div>
         """, unsafe_allow_html=True)
 
-        with tempfile.NamedTemporaryFile(
-            delete=False,
-            suffix=".pdf"
-        ) as tmp:
+        uploaded_file = st.file_uploader(
+            "",
+            type=["pdf"],
+            label_visibility="collapsed"
+        )
 
-            tmp.write(uploaded_file.read())
-            pdf_path = tmp.name
-
-        progress_bar = st.progress(0)
-        status = st.empty()
-
-        start_time = time.time()
-
-        try:
-
-            status.markdown("""
-            <div class='loading-card'>
-            🧠 Reading PDF...
-            </div>
-            """, unsafe_allow_html=True)
-
-            progress_bar.progress(30)
-
-            status.markdown("""
-            <div class='loading-card'>
-            🌐 Searching Web Evidence...
-            </div>
-            """, unsafe_allow_html=True)
-
-            results = run_pipeline(pdf_path)
-
-            progress_bar.progress(100)
-
-            status.markdown("""
-            <div class='loading-card'>
-            🤖 Verifying Claims...
-            </div>
-            """, unsafe_allow_html=True)
-
-            processing_time = round(
-                time.time() - start_time,
-                2
-            )
-
-            if not results:
-                st.warning(
-                    "No factual claims found."
-                )
-                st.stop()
-
-            df = pd.DataFrame(results)
-
-            verified = (
-                df["status"] == "Verified"
-            ).sum()
-
-            false = (
-                df["status"] == "False"
-            ).sum()
-
-            inaccurate = (
-                df["status"] == "Inaccurate"
-            ).sum()
-
-            avg_conf = round(
-                df["confidence"].mean(),
-                2
-            )
-
-            st.subheader(
-                "📊 Verification Summary"
-            )
-
-            a, b, c, d, e = st.columns(5)
-
-            a.metric(
-                "Claims",
-                len(df)
-            )
-
-            b.metric(
-                "Verified",
-                verified
-            )
-
-            c.metric(
-                "False",
-                false
-            )
-
-            d.metric(
-                "Inaccurate",
-                inaccurate
-            )
-
-            e.metric(
-                "Confidence",
-                f"{avg_conf}%"
-            )
+        if uploaded_file:
 
             st.success(
-                f"Completed in {processing_time} sec"
-            )
+    f"✅ {uploaded_file.name}\n\n📦 Size: {round(uploaded_file.size/(1024*1024),2)} MB"
+)
 
-            st.divider()
+            with tempfile.NamedTemporaryFile(
+                delete=False,
+                suffix=".pdf"
+            ) as tmp:
 
-            left, right = st.columns(2)
+                tmp.write(uploaded_file.read())
+                pdf_path = tmp.name
 
-            with left:
+            progress_bar = st.progress(0)
+            status = st.empty()
 
-                fig = px.pie(
-                    df,
-                    names="status",
-                    title="Claim Distribution",
-                    hole=0.45
+            start_time = time.time()
+
+            try:
+
+                status.markdown("""
+                <div class='loading-card'>
+                🧠 Reading PDF...
+                </div>
+                """, unsafe_allow_html=True)
+
+                progress_bar.progress(30)
+
+                status.markdown("""
+                <div class='loading-card'>
+                🌐 Searching Web Evidence...
+                </div>
+                """, unsafe_allow_html=True)
+
+                results = run_pipeline(pdf_path)
+
+                progress_bar.progress(100)
+
+                status.markdown("""
+                <div class='loading-card'>
+                🤖 Verifying Claims...
+                </div>
+                """, unsafe_allow_html=True)
+
+                processing_time = round(
+                    time.time() - start_time,
+                    2
                 )
 
-                st.plotly_chart(
-                    fig,
-                    use_container_width=True
+                # =====================
+                # NO CLAIMS FOUND
+                # =====================
+
+                if not results:
+
+                    st.info(
+                        """
+⚠️ No factual claims were detected in this document.
+
+Possible reasons:
+
+• The PDF contains mostly images/scanned pages.
+• The document has narrative text instead of factual claims.
+• Gemini API quota has been exhausted.
+• Gemini service is temporarily unavailable.
+
+Please try another document or retry after some time.
+                        """
+                    )
+
+                    st.stop()
+
+                # =====================
+                # DATAFRAME
+                # =====================
+
+                df = pd.DataFrame(results)
+
+                verified = (
+                    df["status"] == "Verified"
+                ).sum()
+
+                false = (
+                    df["status"] == "False"
+                ).sum()
+
+                inaccurate = (
+                    df["status"] == "Inaccurate"
+                ).sum()
+
+                avg_conf = round(
+                    df["confidence"].mean(),
+                    2
                 )
 
-            with right:
+                # =====================
+                # SUMMARY
+                # =====================
 
-                chart_df = (
-                    df["status"]
-                    .value_counts()
-                    .reset_index()
+                st.subheader(
+                    "📊 Verification Summary"
                 )
 
-                chart_df.columns = [
-                    "status",
-                    "count"
-                ]
+                a, b, c, d, e = st.columns(5)
 
-                fig2 = px.bar(
-                    chart_df,
-                    x="status",
-                    y="count",
-                    title="Status Breakdown"
+                a.metric(
+                    "Claims",
+                    len(df)
                 )
 
-                st.plotly_chart(
-                    fig2,
-                    use_container_width=True
+                b.metric(
+                    "Verified",
+                    verified
                 )
 
-            st.divider()
-
-            st.subheader(
-                "🔍 Search & Filter"
-            )
-
-            col1, col2 = st.columns(2)
-
-            with col1:
-
-                selected = st.multiselect(
-                    "Status",
-                    df["status"].unique(),
-                    default=df["status"].unique()
+                c.metric(
+                    "False",
+                    false
                 )
 
-            with col2:
-
-                search = st.text_input(
-                    "Search Claim"
+                d.metric(
+                    "Inaccurate",
+                    inaccurate
                 )
 
-            filtered_df = df[
-                df["status"].isin(
-                    selected
+                e.metric(
+                    "Confidence",
+                    f"{avg_conf}%"
                 )
-            ]
 
-            if search:
+                st.success(
+                    f"Completed in {processing_time} sec"
+                )
 
-                filtered_df = filtered_df[
-                    filtered_df["claim"]
-                    .str.contains(
-                        search,
-                        case=False,
-                        na=False
+                st.divider()
+
+                # =====================
+                # CHARTS
+                # =====================
+
+                left, right = st.columns(2)
+
+                with left:
+
+                    fig = px.pie(
+                        df,
+                        names="status",
+                        title="Claim Distribution",
+                        hole=0.45
+                    )
+
+                    st.plotly_chart(
+                        fig,
+                        use_container_width=True
+                    )
+
+                with right:
+
+                    chart_df = (
+                        df["status"]
+                        .value_counts()
+                        .reset_index()
+                    )
+
+                    chart_df.columns = [
+                        "status",
+                        "count"
+                    ]
+
+                    fig2 = px.bar(
+                        chart_df,
+                        x="status",
+                        y="count",
+                        title="Status Breakdown"
+                    )
+
+                    st.plotly_chart(
+                        fig2,
+                        use_container_width=True
+                    )
+
+                st.divider()
+
+                # =====================
+                # SEARCH & FILTER
+                # =====================
+
+                st.subheader(
+                    "🔍 Search & Filter"
+                )
+
+                col1, col2 = st.columns(2)
+
+                with col1:
+
+                    selected = st.multiselect(
+                        "Status",
+                        df["status"].unique(),
+                        default=df["status"].unique()
+                    )
+
+                with col2:
+
+                    search = st.text_input(
+                        "Search Claim"
+                    )
+
+                filtered_df = df[
+                    df["status"].isin(
+                        selected
                     )
                 ]
 
-            st.subheader(
-                "📝 Results"
-            )
+                if search:
 
-            st.dataframe(
-                filtered_df,
-                use_container_width=True,
-                height=450
-            )
+                    filtered_df = filtered_df[
+                        filtered_df["claim"]
+                        .str.contains(
+                            search,
+                            case=False,
+                            na=False
+                        )
+                    ]
 
-            st.divider()
+                # =====================
+                # RESULTS TABLE
+                # =====================
 
-            st.subheader(
-                "📚 Detailed Evidence"
-            )
+                st.subheader(
+                    "📝 Results"
+                )
 
-            for _, row in filtered_df.iterrows():
+                st.dataframe(
+                    filtered_df,
+                    use_container_width=True,
+                    height=450
+                )
 
-                with st.expander(
-                    f"📝 {row['claim'][:90]}..."
-                ):
+                st.divider()
 
-                    st.write(
-                        f"### Status: {row['status']}"
-                    )
+                # =====================
+                # DETAILED EVIDENCE
+                # =====================
 
-                    st.write(
-                        f"### Confidence: {row['confidence']}%"
-                    )
+                st.subheader(
+                    "📚 Detailed Evidence"
+                )
 
-                    if row.get(
-                        "corrected_fact"
+                for _, row in filtered_df.iterrows():
+
+                    with st.expander(
+                        f"📝 {row['claim'][:90]}..."
                     ):
-                        st.write(
-                            "#### Correct Fact"
-                        )
-                        st.write(
-                            row["corrected_fact"]
-                        )
-
-                    if row.get(
-                        "evidence"
-                    ):
-                        st.write(
-                            "#### Evidence"
-                        )
-                        st.write(
-                            row["evidence"]
-                        )
-
-                    source = row.get(
-                        "source"
-                    )
-
-                    if source:
 
                         st.write(
-                            "#### Sources"
+                            f"### Status: {row['status']}"
                         )
 
-                        if isinstance(
-                            source,
-                            list
+                        st.write(
+                            f"### Confidence: {row['confidence']}%"
+                        )
+
+                        if row.get(
+                            "corrected_fact"
                         ):
 
-                            for url in source:
-                                st.markdown(
-                                    f"- {url}"
-                                )
-
-                        else:
                             st.write(
-                                source
+                                "#### Correct Fact"
                             )
 
-            csv_path = generate_csv(
-                results
-            )
+                            st.write(
+                                row["corrected_fact"]
+                            )
 
-            with open(
-                csv_path,
-                "rb"
-            ) as f:
+                        if row.get(
+                            "evidence"
+                        ):
 
-                st.download_button(
-                    label="⬇️ Download Fact Verification Report",
-                    data=f,
-                    file_name="factcheck_report.csv",
-                    mime="text/csv",
-                    use_container_width=True
+                            st.write(
+                                "#### Evidence"
+                            )
+
+                            st.write(
+                                row["evidence"]
+                            )
+
+                        source = row.get(
+                            "source"
+                        )
+
+                        if source:
+
+                            st.write(
+                                "#### Sources"
+                            )
+
+                            if isinstance(
+                                source,
+                                list
+                            ):
+
+                                for url in source:
+                                    st.markdown(
+                                        f"- {url}"
+                                    )
+
+                            else:
+                                st.write(
+                                    source
+                                )
+
+                # =====================
+                # DOWNLOAD REPORT
+                # =====================
+
+                csv_path = generate_csv(
+                    results
                 )
 
-        except Exception as e:
+                with open(
+                    csv_path,
+                    "rb"
+                ) as f:
 
-            st.error(
-                f"Error: {str(e)}"
-            )
+                    st.download_button(
+                        label="⬇️ Download Fact Verification Report",
+                        data=f,
+                        file_name="factcheck_report.csv",
+                        mime="text/csv",
+                        use_container_width=True
+                    )
+
+            except Exception as e:
+
+                st.error(
+                    f"❌ Error: {str(e)}"
+                )
 
 # ======================
 # ANALYTICS PAGE

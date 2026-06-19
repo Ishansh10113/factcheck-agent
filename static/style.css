@@ -988,3 +988,78 @@ MOBILE
         padding:20px;
     }
 }
+/* =========================
+UPLOADED FILE CARD FIX
+========================= */
+
+[data-testid="stFileUploaderFile"]{
+    background: #ffffff !important;
+    border: 1px solid #e8dfd0 !important;
+    border-radius: 16px !important;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+[data-testid="stFileUploaderFile"] *{
+    color: #2B2B2B !important;
+    opacity: 1 !important;
+}
+
+/* file size */
+[data-testid="stFileUploaderFile"] small{
+    color: #6b6b6b !important;
+}
+
+/* remove button */
+[data-testid="stFileUploaderDeleteBtn"]{
+    color: #B08D57 !important;
+}
+/* =========================
+SUCCESS / WARNING / INFO
+========================= */
+
+.stSuccess{
+    background: #E8F8EC !important;
+    color: #155724 !important;
+    border-radius: 18px !important;
+}
+
+.stSuccess *{
+    color: #155724 !important;
+}
+
+.stWarning{
+    background: #FFF7E5 !important;
+    color: #8A6D3B !important;
+    border-radius: 18px !important;
+}
+
+.stWarning *{
+    color: #8A6D3B !important;
+}
+
+.stInfo{
+    background: #EAF4FF !important;
+    color: #0C5460 !important;
+    border-radius: 18px !important;
+}
+
+.stInfo *{
+    color: #0C5460 !important;
+}
+
+.stError{
+    background: #FDECEC !important;
+    color: #842029 !important;
+    border-radius: 18px !important;
+}
+
+.stError *{
+    color: #842029 !important;
+}
+div[data-baseweb="notification"]{
+    color: #8A6D3B !important;
+}
+
+div[data-baseweb="notification"] *{
+    color: #8A6D3B !important;
+}
