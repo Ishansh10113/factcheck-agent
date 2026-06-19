@@ -1,0 +1,395 @@
+2026-06-19 10:48:46,014 | ERROR | Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+2026-06-19 11:55:50,817 | INFO | Pages Found: 39
+2026-06-19 11:55:50,919 | INFO | Characters Extracted: 39601
+2026-06-19 11:55:50,920 | INFO | Text exceeded 15000 chars.
+2026-06-19 11:55:50,921 | INFO | Text truncated to 15021 chars.
+2026-06-19 11:55:50,927 | INFO | Starting Claim Extraction...
+2026-06-19 11:55:50,927 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 11:55:58,400 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-19 11:55:58,409 | INFO | Claims Extracted: 9
+2026-06-19 11:55:58,409 | INFO | Claim -> Sun Tzu’s The Art of War is the earliest military book known in China.
+2026-06-19 11:55:58,410 | INFO | Claim -> Sun Tzu’s The Art of War is the world’s first military treatise.
+2026-06-19 11:55:58,411 | INFO | Claim -> Sun Tzu had the Chinese courtesy name Chang Qing.
+2026-06-19 11:55:58,411 | INFO | Claim -> Sun Tzu lived between BC 544 and BC 470.
+2026-06-19 11:55:58,412 | INFO | Claim -> Sun Tzu lived in Le’an in Qi State, present-day Shandong.
+2026-06-19 11:55:58,413 | INFO | Claim -> Sun Tzu led his forces to five consecutive victories.
+2026-06-19 11:55:58,413 | INFO | Claim -> Sun Tzu's army of 30,000 soldiers defeated Chu’s armies of 600,000 soldiers.
+2026-06-19 11:55:58,414 | INFO | Claim -> The Art of War is divided into 13 sections.
+2026-06-19 11:55:58,415 | INFO | Claim -> Sun Tzu recognises nine varieties of battlegrounds.
+2026-06-19 11:55:58,416 | INFO | Verifying Claim: Sun Tzu’s The Art of War is the earliest military book known in China.
+2026-06-19 11:55:58,417 | INFO | Searching Web -> Sun Tzu’s The Art of War is the earliest military book known in China.
+2026-06-19 11:55:58,417 | INFO | Tavily Search -> Sun Tzu’s The Art of War is the earliest military book known in China.
+2026-06-19 11:56:01,977 | INFO | Sources Retrieved: 5
+2026-06-19 11:56:01,977 | INFO | Sources Found: 5
+2026-06-19 11:56:01,980 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 11:56:03,218 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-06-19 11:56:03,219 | INFO | Verifying Claim: Sun Tzu’s The Art of War is the world’s first military treatise.
+2026-06-19 11:56:03,219 | INFO | Searching Web -> Sun Tzu’s The Art of War is the world’s first military treatise.
+2026-06-19 11:56:03,219 | INFO | Tavily Search -> Sun Tzu’s The Art of War is the world’s first military treatise.
+2026-06-19 11:56:05,551 | INFO | Sources Retrieved: 5
+2026-06-19 11:56:05,551 | INFO | Sources Found: 5
+2026-06-19 11:56:05,555 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 11:56:11,379 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-19 11:56:11,384 | INFO | Verifying Claim: Sun Tzu had the Chinese courtesy name Chang Qing.
+2026-06-19 11:56:11,386 | INFO | Searching Web -> Sun Tzu had the Chinese courtesy name Chang Qing.
+2026-06-19 11:56:11,387 | INFO | Tavily Search -> Sun Tzu had the Chinese courtesy name Chang Qing.
+2026-06-19 11:56:13,760 | INFO | Sources Retrieved: 5
+2026-06-19 11:56:13,762 | INFO | Sources Found: 5
+2026-06-19 11:56:13,763 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 11:56:18,779 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-19 11:56:18,782 | INFO | Verifying Claim: Sun Tzu lived between BC 544 and BC 470.
+2026-06-19 11:56:18,782 | INFO | Searching Web -> Sun Tzu lived between BC 544 and BC 470.
+2026-06-19 11:56:18,783 | INFO | Tavily Search -> Sun Tzu lived between BC 544 and BC 470.
+2026-06-19 11:56:21,166 | INFO | Sources Retrieved: 5
+2026-06-19 11:56:21,166 | INFO | Sources Found: 5
+2026-06-19 11:56:21,168 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 11:56:26,174 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-19 11:56:26,181 | INFO | Verifying Claim: Sun Tzu lived in Le’an in Qi State, present-day Shandong.
+2026-06-19 11:56:26,182 | INFO | Searching Web -> Sun Tzu lived in Le’an in Qi State, present-day Shandong.
+2026-06-19 11:56:26,183 | INFO | Tavily Search -> Sun Tzu lived in Le’an in Qi State, present-day Shandong.
+2026-06-19 11:56:28,259 | INFO | Sources Retrieved: 5
+2026-06-19 11:56:28,260 | INFO | Sources Found: 5
+2026-06-19 11:56:28,260 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 11:56:36,417 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-19 11:56:36,419 | INFO | Verifying Claim: Sun Tzu led his forces to five consecutive victories.
+2026-06-19 11:56:36,419 | INFO | Searching Web -> Sun Tzu led his forces to five consecutive victories.
+2026-06-19 11:56:36,420 | INFO | Tavily Search -> Sun Tzu led his forces to five consecutive victories.
+2026-06-19 11:56:38,761 | INFO | Sources Retrieved: 5
+2026-06-19 11:56:38,761 | INFO | Sources Found: 5
+2026-06-19 11:56:38,761 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 11:56:38,991 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-19 11:56:38,995 | INFO | Verifying Claim: Sun Tzu's army of 30,000 soldiers defeated Chu’s armies of 600,000 soldiers.
+2026-06-19 11:56:38,995 | INFO | Searching Web -> Sun Tzu's army of 30,000 soldiers defeated Chu’s armies of 600,000 soldiers.
+2026-06-19 11:56:38,995 | INFO | Tavily Search -> Sun Tzu's army of 30,000 soldiers defeated Chu’s armies of 600,000 soldiers.
+2026-06-19 11:56:41,899 | INFO | Sources Retrieved: 5
+2026-06-19 11:56:41,899 | INFO | Sources Found: 5
+2026-06-19 11:56:41,900 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 11:56:50,186 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-19 11:56:50,189 | INFO | Verifying Claim: The Art of War is divided into 13 sections.
+2026-06-19 11:56:50,189 | INFO | Searching Web -> The Art of War is divided into 13 sections.
+2026-06-19 11:56:50,189 | INFO | Tavily Search -> The Art of War is divided into 13 sections.
+2026-06-19 11:56:52,661 | INFO | Sources Retrieved: 5
+2026-06-19 11:56:52,661 | INFO | Sources Found: 5
+2026-06-19 11:56:52,662 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 11:56:55,829 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-19 11:56:55,830 | INFO | Verifying Claim: Sun Tzu recognises nine varieties of battlegrounds.
+2026-06-19 11:56:55,831 | INFO | Searching Web -> Sun Tzu recognises nine varieties of battlegrounds.
+2026-06-19 11:56:55,832 | INFO | Tavily Search -> Sun Tzu recognises nine varieties of battlegrounds.
+2026-06-19 11:56:58,954 | INFO | Sources Retrieved: 5
+2026-06-19 11:56:58,955 | INFO | Sources Found: 5
+2026-06-19 11:56:58,955 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 11:57:01,763 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-19 11:59:47,876 | INFO | Pages Found: 39
+2026-06-19 11:59:47,932 | INFO | Characters Extracted: 39601
+2026-06-19 11:59:47,932 | INFO | Text exceeded 15000 chars.
+2026-06-19 11:59:47,933 | INFO | Text truncated to 15021 chars.
+2026-06-19 11:59:47,935 | INFO | Starting Claim Extraction...
+2026-06-19 11:59:47,935 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 11:59:54,670 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-19 11:59:54,673 | INFO | Claims Extracted: 13
+2026-06-19 11:59:54,675 | INFO | Claim -> Sun Tzu’s The Art of War, also known as Sun Wu’s Art of War, is the earliest military book known in China.
+2026-06-19 11:59:54,676 | INFO | Claim -> The Art of War is the world’s first military treatise.
+2026-06-19 11:59:54,676 | INFO | Claim -> The original name of Sun Tzu is Sun Wu.
+2026-06-19 11:59:54,677 | INFO | Claim -> Sun Tzu had the Chinese courtesy name Chang Qing.
+2026-06-19 11:59:54,681 | INFO | Claim -> Sun Tzu lived between BC 544 and BC 470.
+2026-06-19 11:59:54,687 | INFO | Claim -> Sun Tzu lived in Le’an in Qi State, present-day Shandong.
+2026-06-19 11:59:54,689 | INFO | Claim -> Sun Tzu was appointed general in the State of Wu.
+2026-06-19 11:59:54,690 | INFO | Claim -> Sun Tzu led his forces to five consecutive victories against the State of Chu.
+2026-06-19 11:59:54,690 | INFO | Claim -> Sun Tzu’s forces of 30,000 soldiers defeated Chu’s armies of 600,000.
+2026-06-19 11:59:54,690 | INFO | Claim -> The Art of War is the oldest book on military strategy.
+2026-06-19 11:59:54,690 | INFO | Claim -> The Art of War is divided into 13 sections.
+2026-06-19 11:59:54,691 | INFO | Claim -> Sun Tzu lays out five elements that affect a war’s outcome.
+2026-06-19 11:59:54,692 | INFO | Claim -> Sun Tzu recognises nine varieties of battlegrounds.
+2026-06-19 11:59:54,693 | INFO | Verifying Claim: Sun Tzu’s The Art of War, also known as Sun Wu’s Art of War, is the earliest military book known in China.
+2026-06-19 11:59:54,694 | INFO | Searching Web -> Sun Tzu’s The Art of War, also known as Sun Wu’s Art of War, is the earliest military book known in China.
+2026-06-19 11:59:54,694 | INFO | Tavily Search -> Sun Tzu’s The Art of War, also known as Sun Wu’s Art of War, is the earliest military book known in China.
+2026-06-19 11:59:59,277 | INFO | Sources Retrieved: 5
+2026-06-19 11:59:59,277 | INFO | Sources Found: 5
+2026-06-19 11:59:59,279 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 11:59:59,504 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-19 11:59:59,507 | INFO | Verifying Claim: The Art of War is the world’s first military treatise.
+2026-06-19 11:59:59,507 | INFO | Searching Web -> The Art of War is the world’s first military treatise.
+2026-06-19 11:59:59,508 | INFO | Tavily Search -> The Art of War is the world’s first military treatise.
+2026-06-19 12:00:01,906 | INFO | Sources Retrieved: 5
+2026-06-19 12:00:01,906 | INFO | Sources Found: 5
+2026-06-19 12:00:01,907 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 12:00:06,237 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-19 12:00:06,240 | INFO | Verifying Claim: The original name of Sun Tzu is Sun Wu.
+2026-06-19 12:00:06,241 | INFO | Searching Web -> The original name of Sun Tzu is Sun Wu.
+2026-06-19 12:00:06,241 | INFO | Tavily Search -> The original name of Sun Tzu is Sun Wu.
+2026-06-19 12:00:08,821 | INFO | Sources Retrieved: 5
+2026-06-19 12:00:08,822 | INFO | Sources Found: 5
+2026-06-19 12:00:08,823 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 12:00:09,056 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-19 12:00:09,058 | INFO | Verifying Claim: Sun Tzu had the Chinese courtesy name Chang Qing.
+2026-06-19 12:00:09,058 | INFO | Searching Web -> Sun Tzu had the Chinese courtesy name Chang Qing.
+2026-06-19 12:00:09,059 | INFO | Tavily Search -> Sun Tzu had the Chinese courtesy name Chang Qing.
+2026-06-19 12:00:09,343 | INFO | Sources Retrieved: 5
+2026-06-19 12:00:09,344 | INFO | Sources Found: 5
+2026-06-19 12:00:09,346 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 12:00:09,580 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-19 12:00:09,582 | INFO | Verifying Claim: Sun Tzu lived between BC 544 and BC 470.
+2026-06-19 12:00:09,583 | INFO | Searching Web -> Sun Tzu lived between BC 544 and BC 470.
+2026-06-19 12:00:09,583 | INFO | Tavily Search -> Sun Tzu lived between BC 544 and BC 470.
+2026-06-19 12:00:09,870 | INFO | Sources Retrieved: 5
+2026-06-19 12:00:09,870 | INFO | Sources Found: 5
+2026-06-19 12:00:09,872 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 12:00:10,083 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-19 12:00:10,084 | INFO | Verifying Claim: Sun Tzu lived in Le’an in Qi State, present-day Shandong.
+2026-06-19 12:00:10,084 | INFO | Searching Web -> Sun Tzu lived in Le’an in Qi State, present-day Shandong.
+2026-06-19 12:00:10,085 | INFO | Tavily Search -> Sun Tzu lived in Le’an in Qi State, present-day Shandong.
+2026-06-19 12:00:10,366 | INFO | Sources Retrieved: 5
+2026-06-19 12:00:10,367 | INFO | Sources Found: 5
+2026-06-19 12:00:10,368 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 12:00:11,714 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-06-19 12:00:11,716 | INFO | Verifying Claim: Sun Tzu was appointed general in the State of Wu.
+2026-06-19 12:00:11,716 | INFO | Searching Web -> Sun Tzu was appointed general in the State of Wu.
+2026-06-19 12:00:11,716 | INFO | Tavily Search -> Sun Tzu was appointed general in the State of Wu.
+2026-06-19 12:00:13,813 | ERROR | Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+2026-06-19 12:00:14,441 | INFO | Sources Retrieved: 5
+2026-06-19 12:00:14,442 | INFO | Sources Found: 5
+2026-06-19 12:00:14,449 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 12:00:14,666 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-19 12:00:14,672 | INFO | Verifying Claim: Sun Tzu led his forces to five consecutive victories against the State of Chu.
+2026-06-19 12:00:14,673 | INFO | Searching Web -> Sun Tzu led his forces to five consecutive victories against the State of Chu.
+2026-06-19 12:00:14,673 | INFO | Tavily Search -> Sun Tzu led his forces to five consecutive victories against the State of Chu.
+2026-06-19 12:00:16,857 | INFO | Sources Retrieved: 5
+2026-06-19 12:00:16,858 | INFO | Sources Found: 5
+2026-06-19 12:00:16,858 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 12:00:17,080 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-19 12:00:17,083 | INFO | Verifying Claim: Sun Tzu’s forces of 30,000 soldiers defeated Chu’s armies of 600,000.
+2026-06-19 12:00:17,084 | INFO | Searching Web -> Sun Tzu’s forces of 30,000 soldiers defeated Chu’s armies of 600,000.
+2026-06-19 12:00:17,084 | INFO | Tavily Search -> Sun Tzu’s forces of 30,000 soldiers defeated Chu’s armies of 600,000.
+2026-06-19 12:00:19,865 | INFO | Sources Retrieved: 5
+2026-06-19 12:00:19,865 | INFO | Sources Found: 5
+2026-06-19 12:00:19,866 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 12:00:20,082 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-19 12:00:20,088 | INFO | Verifying Claim: The Art of War is the oldest book on military strategy.
+2026-06-19 12:00:20,090 | INFO | Searching Web -> The Art of War is the oldest book on military strategy.
+2026-06-19 12:00:20,095 | INFO | Tavily Search -> The Art of War is the oldest book on military strategy.
+2026-06-19 12:00:22,682 | INFO | Sources Retrieved: 5
+2026-06-19 12:00:22,682 | INFO | Sources Found: 5
+2026-06-19 12:00:22,684 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 12:00:22,889 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-19 12:00:22,891 | INFO | Verifying Claim: The Art of War is divided into 13 sections.
+2026-06-19 12:00:22,891 | INFO | Searching Web -> The Art of War is divided into 13 sections.
+2026-06-19 12:00:22,892 | INFO | Tavily Search -> The Art of War is divided into 13 sections.
+2026-06-19 12:00:23,175 | INFO | Sources Retrieved: 5
+2026-06-19 12:00:23,176 | INFO | Sources Found: 5
+2026-06-19 12:00:23,177 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 12:00:23,389 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-19 12:00:23,391 | INFO | Verifying Claim: Sun Tzu lays out five elements that affect a war’s outcome.
+2026-06-19 12:00:23,391 | INFO | Searching Web -> Sun Tzu lays out five elements that affect a war’s outcome.
+2026-06-19 12:00:23,392 | INFO | Tavily Search -> Sun Tzu lays out five elements that affect a war’s outcome.
+2026-06-19 12:00:26,564 | INFO | Sources Retrieved: 5
+2026-06-19 12:00:26,565 | INFO | Sources Found: 5
+2026-06-19 12:00:26,566 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 12:00:26,773 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-19 12:00:26,776 | INFO | Verifying Claim: Sun Tzu recognises nine varieties of battlegrounds.
+2026-06-19 12:00:26,777 | INFO | Searching Web -> Sun Tzu recognises nine varieties of battlegrounds.
+2026-06-19 12:00:26,777 | INFO | Tavily Search -> Sun Tzu recognises nine varieties of battlegrounds.
+2026-06-19 12:00:27,064 | INFO | Sources Retrieved: 5
+2026-06-19 12:00:27,065 | INFO | Sources Found: 5
+2026-06-19 12:00:27,066 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 12:00:27,271 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-19 12:09:00,743 | INFO | Pages Found: 5
+2026-06-19 12:09:00,751 | INFO | Characters Extracted: 0
+2026-06-19 12:09:00,751 | WARNING | Empty text received.
+2026-06-19 12:09:18,569 | INFO | Pages Found: 39
+2026-06-19 12:09:18,601 | INFO | Characters Extracted: 39601
+2026-06-19 12:09:18,601 | INFO | Text exceeded 15000 chars.
+2026-06-19 12:09:18,601 | INFO | Text truncated to 15021 chars.
+2026-06-19 12:09:18,602 | INFO | Starting Claim Extraction...
+2026-06-19 12:09:18,602 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 12:09:19,378 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-19 12:09:19,381 | ERROR | Claim Extraction Error -> 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 38.573174741s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '38s'}]}}
+2026-06-19 12:09:57,615 | INFO | Pages Found: 39
+2026-06-19 12:09:57,647 | INFO | Characters Extracted: 39601
+2026-06-19 12:09:57,647 | INFO | Text exceeded 15000 chars.
+2026-06-19 12:09:57,647 | INFO | Text truncated to 15021 chars.
+2026-06-19 12:09:57,648 | INFO | Starting Claim Extraction...
+2026-06-19 12:09:57,648 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 12:09:58,059 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-19 12:09:58,060 | ERROR | Claim Extraction Error -> 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 59.918678748s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '59s'}]}}
+2026-06-19 12:11:07,638 | INFO | Pages Found: 39
+2026-06-19 12:11:07,671 | INFO | Characters Extracted: 39601
+2026-06-19 12:11:07,672 | INFO | Text exceeded 15000 chars.
+2026-06-19 12:11:07,672 | INFO | Text truncated to 15021 chars.
+2026-06-19 12:11:07,673 | INFO | Starting Claim Extraction...
+2026-06-19 12:11:07,673 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 12:11:08,195 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-19 12:11:08,196 | ERROR | Claim Extraction Error -> 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 49.766737906s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '49s'}]}}
+2026-06-19 12:13:08,772 | INFO | Pages Found: 39
+2026-06-19 12:13:08,849 | INFO | Characters Extracted: 39601
+2026-06-19 12:13:08,850 | INFO | Text exceeded 15000 chars.
+2026-06-19 12:13:08,850 | INFO | Text truncated to 15021 chars.
+2026-06-19 12:13:08,852 | INFO | Starting Claim Extraction...
+2026-06-19 12:13:08,852 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 12:13:09,424 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-19 12:13:09,426 | ERROR | Claim Extraction Error -> 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 48.55141902s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '48s'}]}}
+2026-06-19 12:15:25,774 | INFO | Pages Found: 39
+2026-06-19 12:15:25,807 | INFO | Characters Extracted: 39601
+2026-06-19 12:15:25,807 | INFO | Text exceeded 15000 chars.
+2026-06-19 12:15:25,808 | INFO | Text truncated to 15021 chars.
+2026-06-19 12:15:25,808 | INFO | Starting Claim Extraction...
+2026-06-19 12:15:25,808 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 12:15:26,338 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-19 12:15:26,339 | ERROR | Claim Extraction Error -> 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 31.624357528s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '31s'}]}}
+2026-06-19 12:15:36,457 | INFO | Pages Found: 341
+2026-06-19 12:15:36,607 | INFO | Characters Extracted: 230723
+2026-06-19 12:15:36,608 | INFO | Text exceeded 15000 chars.
+2026-06-19 12:15:36,608 | INFO | Text truncated to 15021 chars.
+2026-06-19 12:15:36,608 | INFO | Starting Claim Extraction...
+2026-06-19 12:15:36,608 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 12:15:37,214 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 400 Bad Request"
+2026-06-19 12:15:37,216 | ERROR | Claim Extraction Error -> 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'API key expired. Please renew the API key.', 'status': 'INVALID_ARGUMENT', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'API_KEY_INVALID', 'domain': 'googleapis.com', 'metadata': {'service': 'generativelanguage.googleapis.com'}}, {'@type': 'type.googleapis.com/google.rpc.LocalizedMessage', 'locale': 'en-US', 'message': 'API key expired. Please renew the API key.'}]}}
+2026-06-19 12:45:46,803 | INFO | Pages Found: 39
+2026-06-19 12:45:46,836 | INFO | Characters Extracted: 39601
+2026-06-19 12:45:46,836 | INFO | Text exceeded 15000 chars.
+2026-06-19 12:45:46,836 | INFO | Text truncated to 15021 chars.
+2026-06-19 12:45:46,838 | INFO | Starting Claim Extraction...
+2026-06-19 12:45:46,838 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 12:45:53,645 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-19 12:45:53,655 | INFO | Claims Extracted: 9
+2026-06-19 12:45:53,657 | INFO | Claim -> Sun Tzu’s The Art of War is the earliest military book known in China.
+2026-06-19 12:45:53,657 | INFO | Claim -> Sun Tzu’s The Art of War is the world’s first military treatise.
+2026-06-19 12:45:53,657 | INFO | Claim -> The Art of War is known as the first book of war.
+2026-06-19 12:45:53,657 | INFO | Claim -> Sun Tzu lived between BC 544 and BC 470.
+2026-06-19 12:45:53,657 | INFO | Claim -> Sun Tzu lived in Le’an in Qi State, present-day Shandong.
+2026-06-19 12:45:53,657 | INFO | Claim -> Sun Tzu led his forces to five consecutive victories.
+2026-06-19 12:45:53,658 | INFO | Claim -> Sun Tzu defeated Chu’s armies of 600,000 with 30,000 soldiers.
+2026-06-19 12:45:53,658 | INFO | Claim -> The Art of War is divided into 13 sections.
+2026-06-19 12:45:53,658 | INFO | Claim -> Sun Tzu recognizes nine varieties of battlegrounds.
+2026-06-19 12:45:53,658 | INFO | Verifying Claim: Sun Tzu’s The Art of War is the earliest military book known in China.
+2026-06-19 12:45:53,658 | INFO | Searching Web -> Sun Tzu’s The Art of War is the earliest military book known in China.
+2026-06-19 12:45:53,658 | INFO | Tavily Search -> Sun Tzu’s The Art of War is the earliest military book known in China.
+2026-06-19 12:45:57,455 | INFO | Sources Retrieved: 5
+2026-06-19 12:45:57,455 | INFO | Sources Found: 5
+2026-06-19 12:45:57,456 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 12:46:14,147 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-19 12:46:14,229 | INFO | Verifying Claim: Sun Tzu’s The Art of War is the world’s first military treatise.
+2026-06-19 12:46:14,229 | INFO | Searching Web -> Sun Tzu’s The Art of War is the world’s first military treatise.
+2026-06-19 12:46:14,229 | INFO | Tavily Search -> Sun Tzu’s The Art of War is the world’s first military treatise.
+2026-06-19 12:46:16,855 | INFO | Sources Retrieved: 5
+2026-06-19 12:46:16,856 | INFO | Sources Found: 5
+2026-06-19 12:46:16,858 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 12:46:20,152 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-19 12:46:20,155 | INFO | Verifying Claim: The Art of War is known as the first book of war.
+2026-06-19 12:46:20,156 | INFO | Searching Web -> The Art of War is known as the first book of war.
+2026-06-19 12:46:20,156 | INFO | Tavily Search -> The Art of War is known as the first book of war.
+2026-06-19 12:46:22,441 | INFO | Sources Retrieved: 5
+2026-06-19 12:46:22,441 | INFO | Sources Found: 5
+2026-06-19 12:46:22,442 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 12:46:27,784 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-19 12:46:27,787 | INFO | Verifying Claim: Sun Tzu lived between BC 544 and BC 470.
+2026-06-19 12:46:27,787 | INFO | Searching Web -> Sun Tzu lived between BC 544 and BC 470.
+2026-06-19 12:46:27,787 | INFO | Tavily Search -> Sun Tzu lived between BC 544 and BC 470.
+2026-06-19 12:46:30,210 | INFO | Sources Retrieved: 5
+2026-06-19 12:46:30,210 | INFO | Sources Found: 5
+2026-06-19 12:46:30,210 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 12:46:31,561 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-06-19 12:46:31,562 | INFO | Verifying Claim: Sun Tzu lived in Le’an in Qi State, present-day Shandong.
+2026-06-19 12:46:31,562 | INFO | Searching Web -> Sun Tzu lived in Le’an in Qi State, present-day Shandong.
+2026-06-19 12:46:31,562 | INFO | Tavily Search -> Sun Tzu lived in Le’an in Qi State, present-day Shandong.
+2026-06-19 12:46:33,998 | INFO | Sources Retrieved: 5
+2026-06-19 12:46:33,998 | INFO | Sources Found: 5
+2026-06-19 12:46:33,999 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 12:46:35,695 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-06-19 12:46:35,697 | INFO | Verifying Claim: Sun Tzu led his forces to five consecutive victories.
+2026-06-19 12:46:35,698 | INFO | Searching Web -> Sun Tzu led his forces to five consecutive victories.
+2026-06-19 12:46:35,698 | INFO | Tavily Search -> Sun Tzu led his forces to five consecutive victories.
+2026-06-19 12:46:38,280 | INFO | Sources Retrieved: 5
+2026-06-19 12:46:38,281 | INFO | Sources Found: 5
+2026-06-19 12:46:38,282 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 12:46:39,723 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-06-19 12:46:39,725 | INFO | Verifying Claim: Sun Tzu defeated Chu’s armies of 600,000 with 30,000 soldiers.
+2026-06-19 12:46:39,725 | INFO | Searching Web -> Sun Tzu defeated Chu’s armies of 600,000 with 30,000 soldiers.
+2026-06-19 12:46:39,726 | INFO | Tavily Search -> Sun Tzu defeated Chu’s armies of 600,000 with 30,000 soldiers.
+2026-06-19 12:46:42,061 | INFO | Sources Retrieved: 5
+2026-06-19 12:46:42,061 | INFO | Sources Found: 5
+2026-06-19 12:46:42,062 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 12:46:46,302 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-19 12:46:46,304 | INFO | Verifying Claim: The Art of War is divided into 13 sections.
+2026-06-19 12:46:46,305 | INFO | Searching Web -> The Art of War is divided into 13 sections.
+2026-06-19 12:46:46,305 | INFO | Tavily Search -> The Art of War is divided into 13 sections.
+2026-06-19 12:46:48,773 | INFO | Sources Retrieved: 5
+2026-06-19 12:46:48,774 | INFO | Sources Found: 5
+2026-06-19 12:46:48,775 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 12:46:48,981 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-19 12:46:48,982 | INFO | Verifying Claim: Sun Tzu recognizes nine varieties of battlegrounds.
+2026-06-19 12:46:48,982 | INFO | Searching Web -> Sun Tzu recognizes nine varieties of battlegrounds.
+2026-06-19 12:46:48,983 | INFO | Tavily Search -> Sun Tzu recognizes nine varieties of battlegrounds.
+2026-06-19 12:46:51,252 | INFO | Sources Retrieved: 5
+2026-06-19 12:46:51,252 | INFO | Sources Found: 5
+2026-06-19 12:46:51,253 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 12:46:54,167 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-19 12:47:52,223 | ERROR | Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+2026-06-19 12:48:20,667 | INFO | Pages Found: 39
+2026-06-19 12:48:20,735 | INFO | Characters Extracted: 39601
+2026-06-19 12:48:20,736 | INFO | Text exceeded 15000 chars.
+2026-06-19 12:48:20,737 | INFO | Text truncated to 15021 chars.
+2026-06-19 12:48:20,740 | INFO | Starting Claim Extraction...
+2026-06-19 12:48:20,741 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 12:48:25,509 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-06-19 12:48:25,511 | ERROR | Claim Extraction Error -> 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-06-19 12:49:16,410 | INFO | Pages Found: 39
+2026-06-19 12:49:16,507 | INFO | Characters Extracted: 39601
+2026-06-19 12:49:16,508 | INFO | Text exceeded 15000 chars.
+2026-06-19 12:49:16,508 | INFO | Text truncated to 15021 chars.
+2026-06-19 12:49:16,509 | INFO | Starting Claim Extraction...
+2026-06-19 12:49:16,509 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 12:49:19,104 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-06-19 12:49:19,107 | ERROR | Claim Extraction Error -> 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-06-19 12:52:13,282 | INFO | Pages Found: 39
+2026-06-19 12:52:13,319 | INFO | Characters Extracted: 39601
+2026-06-19 12:52:13,319 | INFO | Text exceeded 15000 chars.
+2026-06-19 12:52:13,319 | INFO | Text truncated to 15021 chars.
+2026-06-19 12:52:13,320 | INFO | Starting Claim Extraction...
+2026-06-19 12:52:13,320 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 12:52:15,812 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-06-19 12:52:15,812 | ERROR | Claim Extraction Error -> 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-06-19 12:57:39,565 | INFO | Pages Found: 39
+2026-06-19 12:57:39,591 | INFO | Characters Extracted: 39601
+2026-06-19 12:57:39,591 | INFO | Text exceeded 15000 chars.
+2026-06-19 12:57:39,592 | INFO | Text truncated to 15021 chars.
+2026-06-19 12:57:39,593 | INFO | Starting Claim Extraction...
+2026-06-19 12:57:39,593 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 12:57:39,876 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-19 12:57:39,877 | ERROR | Claim Extraction Error -> Gemini quota exceeded. Please try later or use another API key.
+2026-06-19 13:12:26,902 | INFO | Pages Found: 39
+2026-06-19 13:12:27,151 | INFO | Characters Extracted: 39601
+2026-06-19 13:12:27,151 | INFO | Text exceeded 15000 chars.
+2026-06-19 13:12:27,152 | INFO | Text truncated to 15021 chars.
+2026-06-19 13:12:27,156 | INFO | Starting Claim Extraction...
+2026-06-19 13:12:27,156 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 13:12:27,591 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-19 13:12:27,601 | ERROR | Claim Extraction Error -> Gemini quota exceeded. Please try later or use another API key.
+2026-06-19 13:14:52,913 | INFO | Pages Found: 39
+2026-06-19 13:14:53,028 | INFO | Characters Extracted: 39601
+2026-06-19 13:14:53,028 | INFO | Text exceeded 15000 chars.
+2026-06-19 13:14:53,029 | INFO | Text truncated to 15021 chars.
+2026-06-19 13:14:53,031 | INFO | Starting Claim Extraction...
+2026-06-19 13:14:53,032 | INFO | AFC is enabled with max remote calls: 10.
+2026-06-19 13:14:53,459 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-06-19 13:14:53,463 | ERROR | Claim Extraction Error -> Gemini quota exceeded. Please try later or use another API key.

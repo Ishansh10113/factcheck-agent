@@ -1,0 +1,11 @@
+streamlit
+google-genai
+tavily-python
+pymupdf
+pandas
+python-dotenv
+requests
+reportlab
+plotly
+pydantic
+rapidfuzz

@@ -1,0 +1,663 @@
+/* ======================================================
+FACTCHECK AI
+Premium Beige Glassmorphism UI
+====================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* ======================================================
+GLOBAL
+====================================================== */
+
+html,
+body,
+[class*="css"] {
+    font-family: 'Inter', sans-serif;
+}
+
+.stApp {
+    background:
+        linear-gradient(
+            135deg,
+            #F9F5F0,
+            #F3EDE4,
+            #ECE3D4
+        );
+
+    color: #2B2B2B;
+
+    animation: fadeIn 0.8s ease;
+}
+
+/* ======================================================
+HIDE STREAMLIT DEFAULTS
+====================================================== */
+
+#MainMenu,
+header,
+footer {
+    visibility: hidden;
+}
+
+/* ======================================================
+ANIMATIONS
+====================================================== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes floatCard {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes glow {
+
+    0% {
+        box-shadow:
+            0 0 0 rgba(
+                176,
+                141,
+                87,
+                0.15
+            );
+    }
+
+    50% {
+        box-shadow:
+            0 0 35px rgba(
+                176,
+                141,
+                87,
+                0.25
+            );
+    }
+
+    100% {
+        box-shadow:
+            0 0 0 rgba(
+                176,
+                141,
+                87,
+                0.15
+            );
+    }
+}
+
+/* ======================================================
+SIDEBAR
+====================================================== */
+
+[data-testid="stSidebar"] {
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.35
+        );
+
+    backdrop-filter: blur(30px);
+
+    border-right:
+        1px solid rgba(
+            255,
+            255,
+            255,
+            0.55
+        );
+
+    box-shadow:
+        0 8px 35px rgba(
+            0,
+            0,
+            0,
+            0.08
+        );
+}
+
+/* ======================================================
+HERO CARD
+====================================================== */
+
+.hero-card {
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.55
+        );
+
+    backdrop-filter: blur(30px);
+
+    border:
+        1px solid rgba(
+            255,
+            255,
+            255,
+            0.7
+        );
+
+    border-radius: 35px;
+
+    padding: 60px;
+
+    text-align: center;
+
+    margin-bottom: 40px;
+
+    box-shadow:
+        0 20px 60px rgba(
+            0,
+            0,
+            0,
+            0.08
+        );
+
+    animation:
+        floatCard 6s ease infinite;
+}
+
+.hero-badge {
+
+    display: inline-block;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.65
+        );
+
+    padding:
+        12px 25px;
+
+    border-radius: 50px;
+
+    margin-bottom: 25px;
+
+    font-weight: 600;
+
+    color: #7C5C2E;
+}
+
+.hero-title {
+
+    font-size: 70px;
+
+    font-weight: 800;
+
+    background:
+        linear-gradient(
+            90deg,
+            #7C5C2E,
+            #B08D57
+        );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    margin-bottom: 25px;
+}
+
+.hero-subtitle {
+
+    font-size: 22px;
+
+    color: #555;
+
+    line-height: 1.8;
+
+    max-width: 900px;
+
+    margin: auto;
+}
+
+/* ======================================================
+METRIC CARDS
+====================================================== */
+
+.metric-card {
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.55
+        );
+
+    backdrop-filter: blur(25px);
+
+    border:
+        1px solid rgba(
+            255,
+            255,
+            255,
+            0.7
+        );
+
+    border-radius: 30px;
+
+    padding: 30px;
+
+    min-height: 220px;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    box-shadow:
+        0 15px 45px rgba(
+            0,
+            0,
+            0,
+            0.08
+        );
+
+    transition: 0.4s;
+}
+
+.metric-card:hover {
+
+    transform:
+        translateY(-10px);
+
+    animation:
+        glow 2s infinite;
+}
+
+.metric-icon {
+    font-size: 36px;
+}
+
+.metric-label {
+
+    font-size: 18px;
+
+    color: #7C5C2E;
+
+    font-weight: 600;
+
+    margin-top: 15px;
+}
+
+.metric-value {
+
+    font-size: 42px;
+
+    color: #2B2B2B;
+
+    font-weight: 700;
+
+    margin-top: 15px;
+
+    word-break: break-word;
+}
+
+/* ======================================================
+UPLOAD CARD
+====================================================== */
+
+.upload-card {
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.55
+        );
+
+    backdrop-filter:
+        blur(25px);
+
+    border:
+        1px solid rgba(
+            255,
+            255,
+            255,
+            0.7
+        );
+
+    border-radius: 35px;
+
+    padding: 40px;
+
+    margin-bottom: 35px;
+
+    box-shadow:
+        0 20px 55px rgba(
+            0,
+            0,
+            0,
+            0.07
+        );
+}
+
+.section-title {
+
+    font-size: 48px;
+
+    font-weight: 700;
+
+    color: #2B2B2B;
+}
+
+.section-subtitle {
+
+    font-size: 22px;
+
+    color: #555;
+
+    margin-top: 15px;
+}
+
+/* ======================================================
+FILE UPLOADER
+====================================================== */
+
+[data-testid="stFileUploader"] {
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.6
+        );
+
+    border:
+        2px dashed #B08D57;
+
+    border-radius: 30px;
+
+    padding: 35px;
+
+    backdrop-filter:
+        blur(25px);
+
+    transition: 0.3s;
+}
+
+[data-testid="stFileUploader"]:hover {
+
+    transform:
+        scale(1.01);
+
+    box-shadow:
+        0 0 35px rgba(
+            176,
+            141,
+            87,
+            0.25
+        );
+}
+
+/* ======================================================
+BUTTONS
+====================================================== */
+
+.stButton>button,
+.stDownloadButton>button {
+
+    background:
+        linear-gradient(
+            90deg,
+            #B08D57,
+            #D7C6A6
+        );
+
+    color: #2B2B2B;
+
+    border: none;
+
+    border-radius: 15px;
+
+    padding:
+        0.9rem 2rem;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.stButton>button:hover,
+.stDownloadButton>button:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 12px 30px rgba(
+            176,
+            141,
+            87,
+            0.30
+        );
+}
+
+/* ======================================================
+TABLES
+====================================================== */
+
+[data-testid="stDataFrame"] {
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.55
+        );
+
+    border-radius: 30px;
+
+    backdrop-filter:
+        blur(20px);
+
+    border:
+        1px solid rgba(
+            255,
+            255,
+            255,
+            0.7
+        );
+}
+
+/* ======================================================
+EXPANDERS
+====================================================== */
+
+.streamlit-expanderHeader {
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.55
+        );
+
+    border-radius: 15px;
+
+    padding: 15px;
+
+    color: #2B2B2B;
+}
+
+/* ======================================================
+INPUTS
+====================================================== */
+
+.stTextInput input,
+.stMultiSelect,
+.stSelectbox {
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.55
+        );
+
+    color: #2B2B2B;
+
+    border-radius: 12px;
+}
+
+/* ======================================================
+PROGRESS BAR
+====================================================== */
+
+.stProgress>div>div>div {
+
+    background:
+        linear-gradient(
+            90deg,
+            #B08D57,
+            #D7C6A6
+        );
+}
+
+/* ======================================================
+SCROLLBAR
+====================================================== */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F3EDE4;
+}
+
+::-webkit-scrollbar-thumb {
+
+    background:
+        linear-gradient(
+            #B08D57,
+            #D7C6A6
+        );
+
+    border-radius: 20px;
+}
+
+/* ======================================================
+FLOATING BLOBS
+====================================================== */
+
+.circle1 {
+
+    position: fixed;
+
+    width: 450px;
+    height: 450px;
+
+    background:
+        rgba(
+            212,
+            180,
+            131,
+            0.25
+        );
+
+    border-radius: 50%;
+
+    top: -180px;
+    left: -180px;
+
+    filter: blur(120px);
+
+    z-index: -1;
+}
+
+.circle2 {
+
+    position: fixed;
+
+    width: 400px;
+    height: 400px;
+
+    background:
+        rgba(
+            255,
+            240,
+            213,
+            0.35
+        );
+
+    border-radius: 50%;
+
+    bottom: -150px;
+    right: -150px;
+
+    filter: blur(120px);
+
+    z-index: -1;
+}
+
+/* ======================================================
+RESPONSIVE
+====================================================== */
+
+@media (max-width:768px) {
+
+    .hero-title {
+        font-size: 45px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+    }
+
+    .section-title {
+        font-size: 36px;
+    }
+
+    .metric-value {
+        font-size: 28px;
+    }
+}
+/* ===== STREAMLIT METRICS ===== */
+
+[data-testid="metric-container"]{
+    background: rgba(255,255,255,0.65);
+    border-radius:25px;
+    padding:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    border:1px solid rgba(255,255,255,0.7);
+}
+
+[data-testid="metric-container"] label{
+    color:#7C5C2E !important;
+    font-weight:600 !important;
+}
+
+[data-testid="stMetricValue"]{
+    color:#2B2B2B !important;
+    font-weight:800 !important;
+    font-size:40px !important;
+}
